@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Id Details - {% block title %}{% endblock %}
+    </title>
+
+    <!--<script src="{% static 'js/main.js' %}"></script> &lt;!&ndash; This is how to include a static file &ndash;&gt;-->
+
+      <link rel="stylesheet" href="{% static 'validator/css/bootstrap.css' %}" type="text/css" />
+
+  </head>
+  <body>
+
+    <div class="centered">
+          <ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+      {% block pagecontent %}
+         <h1>{{ object.name }}</h1>
+    <p>Id Number: {{ object.sa_id }}</p>
+      {% endblock %}
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+    <!--<input type="text" name="name" placeholder="Your title"/><br/>-->
+    <!--<input type="text" name="location" placeholder="location"/><br/>-->
+    <!--<input type="text" name="category" placeholder="Category"/><br/>-->
